@@ -40,4 +40,12 @@ public class DeckTest {
         deck.shuffle();
         assertEquals(52, deck.numberOfCards());
     }
+
+    @Test
+    public void deckCanDealCard(){
+        deck.makeCardset();
+        deck.dealCard();
+        assertEquals(51, deck.numberOfCards());
+        assertEquals(1, deck.numberOfDealtCards());
+    }
 }

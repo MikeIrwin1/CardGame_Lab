@@ -4,9 +4,11 @@ import java.util.Collections;
 public class Deck {
 
     private ArrayList<Card> cards;
+    private ArrayList<Card> dealtCards;
 
     public Deck(){
         this.cards = new ArrayList<>();
+        this.dealtCards = new ArrayList<>();
     }
 
     public int numberOfCards() {
@@ -37,5 +39,15 @@ public class Deck {
 
     public void shuffle(){
         Collections.shuffle(this.cards);
+    }
+
+    public void dealCard(){
+        shuffle();
+        Card dealtCard = this.cards.remove(0);
+        this.dealtCards.add(dealtCard);
+    }
+
+    public int numberOfDealtCards() {
+        return this.dealtCards.size();
     }
 }
