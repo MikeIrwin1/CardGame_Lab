@@ -11,6 +11,10 @@ public class Deck {
         this.dealtCards = new ArrayList<>();
     }
 
+    public ArrayList<Card> getDealtCards() {
+        return dealtCards;
+    }
+
     public int numberOfCards() {
         return this.cards.size();
     }
@@ -45,6 +49,7 @@ public class Deck {
         shuffle();
         Card dealtCard = this.cards.remove(0);
         this.dealtCards.add(dealtCard);
+
     }
 
     public int numberOfDealtCards() {
